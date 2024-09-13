@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Career Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .mySlides {
+            display: none;
+            position: relative;
+        }
+
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: 0.4;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .text {
+            color: #fff;
+            font-size: 24px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        .banner-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .prev {
+            left: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active,
+        .dot:hover {
+            background-color: #717171;
+        }
+
+        .options-section {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .options-section h2 {
+            color: #4a4a4a;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .options-section p {
+            color: #6f6f6f;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .options-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .option {
+            text-align: center;
+            background-color: #f7f7f7;
+            border-radius: 8px;
+            padding: 20px;
+            width: 150px;
+            transition: transform 0.3s ease;
+        }
+
+        .option img {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 10px;
+        }
+
+        .option p {
+            font-size: 16px;
+            color: #333;
+        }
+
+        .option:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .orange {
+            color: #811d3f;
+        }
+
+        section h2 {
+            color: #000;
+            font-size: 30px;
+            margin-bottom: 20px;
+            margin-top: 0;
+        }
+
+        /* Styles for floating chat button */
+        .chat-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color:rgb(137,79,31);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            padding: 15px;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .chat-button:hover {
+            transform: scale(1.1);
+            background-color: #cf204c;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <h2>Ajivika</h2>
+        </div>
+        <ul class="nav-links">
+            <li><a href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+            <li><a href="register.html"><i class="fas fa-user-plus"></i> Register</a></li>
+            <li><a href="Contact.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
+        </ul>
+    </nav>    
+
+    <!-- Home Page Content -->
+    <section class="section home-section">
+        <h1>Welcome to Ajivika</h1>
+        <p>Your one-stop destination for career growth and learning.</p>
+        <div class="slideshow-container">
+            <!-- Slide 1 -->
+            <div class="mySlides fade">
+                <img src="upskill-banner.jpg" alt="Upskill" class="banner-image">
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="mySlides fade">
+                <img src="apply-jobs-banner.jpg" alt="Apply for the best jobs" class="banner-image">
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="mySlides fade">
+                <img src="resume-banner.jpg" alt="Get your resume made" class="banner-image">
+            </div>
+
+            <!-- Navigation buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+        <!-- Dots -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+
+        <section class="section options-section">
+            <h2>What are
+                <span class="orange">you looking for?</span>
+            </h2>
+            <p>Prepare for the next step in your career with the following options.</p>
+            <div class="options-container">
+                <div class="option">
+                    <a href="resume.html">
+                        <img src="resume.png" alt="Resume">
+                        <p>Resume</p>
+                    </a>
+                </div>
+                <div class="option">
+                    <a href="http://127.0.0.1:5000/"> <!-- Ensure no target="_blank" attribute -->
+                        <img src="job.webp" alt="Apply for Jobs">
+                        <p>Apply for Jobs</p>
+                    </a>
+                </div>
+                <div class="option">
+                    <a href="courses.html">
+                        <img src="courses.png" alt="Courses">
+                        <p>Courses</p>
+                    </a>
+                </div>
+                <div class="option">
+                    <a href="dashboard.html">
+                        <img src="dashboard.jpg" alt="Dashboard">
+                        <p>Dashboard</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 CareerSite. All rights reserved.</p>
+    </footer>
+
+    <!-- Floating Chat Button -->
+    <button class="chat-button" onclick="window.location.href='http://127.0.0.1:5001'">
+        <i class="fas fa-comments"></i>
+    </button>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+</body>
+</html>

@@ -208,7 +208,6 @@
         .social-icon i {
             font-size: 20px;
         }
-        
     </style>
 </head>
 <body>
@@ -261,11 +260,23 @@
     </div>
 
     <script>
-        document.getElementById('togglePassword').addEventListener('click', function () {
+        // Toggle password visibility
+        document.getElementById('togglePassword').addEventListener('click', function() {
             const passwordField = document.getElementById('password');
             const type = passwordField.type === 'password' ? 'text' : 'password';
             passwordField.type = type;
             this.classList.toggle('fa-eye-slash');
+        });
+
+        // Handle form submission
+        document.getElementById('registerForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Add your validation logic here if needed
+            // For demonstration, we'll assume the registration is always successful
+
+            // Redirect to index2.html after successful registration
+            window.location.href = 'index2.html';
         });
     </script>
 </body>

@@ -48,7 +48,6 @@
         .snowflake:nth-child(8) { left: 75%; font-size: 1.3em; animation-duration: 10s; }
         .snowflake:nth-child(9) { left: 85%; font-size: 1.5em; animation-duration: 12s; }
         .snowflake:nth-child(10) { left: 95%; font-size: 2em; animation-duration: 15s; }
-        /* Add more snowflakes as needed */
 
         /* Image styling (just above the box) */
         .login-image {
@@ -261,6 +260,17 @@
             const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
             passwordField.setAttribute('type', type);
             this.classList.toggle('fa-eye-slash');
+        });
+
+        // Handle form submission
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+            
+            // Add your validation logic here
+            // For demonstration, we'll assume the login is always successful
+
+            // Redirect to index2.html after successful login
+            window.location.href = 'index2.html';
         });
     </script>
 </body>

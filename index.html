@@ -24,6 +24,7 @@
             max-width: 100%;
             margin: auto;
             overflow: hidden;
+            color: #FFD465;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
@@ -99,7 +100,8 @@
             height: 15px;
             width: 15px;
             margin: 0 2px;
-            background-color: #bbb;
+            background-color:#FFD465;
+            color: #FFD465;
             border-radius: 50%;
             display: inline-block;
             transition: background-color 0.6s ease;
@@ -136,7 +138,7 @@
 
         .option {
             text-align: center;
-            background-color: #f7f7f7;
+            background-color:  #f7f7f7;
             border-radius: 8px;
             padding: 20px;
             width: 150px;
@@ -153,7 +155,9 @@
             font-size: 16px;
             color: #333;
         }
-
+        .options-container:hover{
+            color: #FFD465;
+        }
         .option:hover {
             transform: translateY(-10px);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -164,7 +168,7 @@
 
 
         .orange {
-            color: #811d3f;
+            color: #d6a52b;
         }
 
         section h2 {
@@ -179,7 +183,7 @@
             position: fixed;
             bottom: 20px;
             right: 20px;
-            background-color:rgb(137,79,31);
+            background-color:#d6a52b;
             color: white;
             border: none;
             border-radius: 50%;
@@ -192,7 +196,7 @@
 
         .chat-button:hover {
             transform: scale(1.1);
-            background-color: #cf204c;
+            background-color: #000;
         }
 
         /* Styles for floating image button */
@@ -239,7 +243,7 @@
 
     <!-- Home Page Content -->
     <section class="section home-section">
-        <h1>Welcome to Ajivika</h1>
+        <h1 style="color: #d6a52b;">Welcome to Ajivika</h1>
         <p>Your one-stop destination for career growth and learning.</p>
         <div class="slideshow-container">
             <!-- Slide 1 -->
@@ -270,42 +274,43 @@
         </div>
 
         <section class="section options-section">
-            <h2>What are
+            <h2 style="color: black;">What are
                 <span class="orange">you looking for?</span>
             </h2>
             <p>Prepare for the next step in your career with the following options.</p>
-            <div class="options-container">
-                <div class="option">
-                    <a href="./resume.html">
-                        <img src="./resume.png" alt="Resume">
+            <div class="options-container" style="display: flex; gap: 20px;">
+                <div class="option" style="text-align: center; padding: 20px; border: 1px solid #ccc; transition: background-color 0.3s ease; cursor: pointer;" onmouseover="this.style.backgroundColor='#FFD465'" onmouseout="this.style.backgroundColor='white'">
+                    <a href="./resume.html" style="text-decoration: none; color: black;">
+                        <img src="./resume.png" alt="Resume" style="width: 100px; height: 100px;">
                         <p>Resume</p>
                     </a>
                 </div>
-                <div class="option">
-                    <a href="./index2.html"> <!-- Ensure no target="_blank" attribute -->
-                        <img src="./job.webp" alt="Apply for Jobs">
+                <div class="option" style="text-align: center; padding: 20px; border: 1px solid #ccc; transition: background-color 0.3s ease; cursor: pointer;" onmouseover="this.style.backgroundColor='#FFD465'" onmouseout="this.style.backgroundColor='white'">
+                    <a href="./index2.html" style="text-decoration: none; color: black;">
+                        <img src="./job.webp" alt="Apply for Jobs" style="width: 100px; height: 100px;">
                         <p>Apply for Jobs</p>
                     </a>
                 </div>
-                <div class="option">
-                    <a href="./courses.html">
-                        <img src="./courses.png" alt="Courses">
+                <div class="option" style="text-align: center; padding: 20px; border: 1px solid #ccc; transition: background-color 0.3s ease; cursor: pointer;" onmouseover="this.style.backgroundColor='#FFD465'" onmouseout="this.style.backgroundColor='white'">
+                    <a href="./courses.html" style="text-decoration: none; color: black;">
+                        <img src="./courses.png" alt="Courses" style="width: 100px; height: 100px;">
                         <p>Courses</p>
                     </a>
                 </div>
-                <div class="option">
-                    <a href="dashboard.html">
-                        <img src="./dashboard.jpg" alt="Dashboard">
+                <div class="option" style="text-align: center; padding: 20px; border: 1px solid #ccc; transition: background-color 0.3s ease; cursor: pointer;" onmouseover="this.style.backgroundColor='#FFD465'" onmouseout="this.style.backgroundColor='white'">
+                    <a href="dashboard.html" style="text-decoration: none; color: black;">
+                        <img src="./dashboard.jpg" alt="Dashboard" style="width: 100px; height: 100px;">
                         <p>Dashboard</p>
                     </a>
                 </div>
             </div>
+            
         </section>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 CareerSite. All rights reserved.</p>
+        <p style="color: #d6a52b;">&copy; 2024 CareerSite. All rights reserved.</p>
     </footer>
 
     <!-- Floating Chat Button -->
